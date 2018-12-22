@@ -1,5 +1,5 @@
 <template>
-  <v-breadcrumbs :items="items" class="breadcrumbs" divider=">">
+  <v-breadcrumbs :items="items" class="breadcrumbs" divider="/">
     <template slot="item" slot-scope="props">
       <router-link :to="{ name: props.item.href }" class="link">{{ props.item.name }}</router-link>
     </template>
