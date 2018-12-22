@@ -37,4 +37,12 @@ npm run build
 npm run build --report
 ```
 
+### How can I support developers?
+- Star my GitHub repo :star:
+- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+
+<a href="https://www.patreon.com/fatihunlu">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
