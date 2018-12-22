@@ -11,37 +11,49 @@
       </router-link>
     </v-toolbar>
     <v-list>
-      <v-list-tile @click="$router.push({ name: 'Dashboard' })">
+      <v-list-tile @click="changeRoute('Dashboard', 1)">
         <v-list-tile-action>
           <v-icon>dashboard</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title class="item-title">Dashboard</v-list-tile-title>
+        <v-list-tile-title :class="[{'active': selectedIndex === 1}, 'item-title' ]" >Dashboard</v-list-tile-title>
       </v-list-tile>
 
-      <v-list-tile @click="$router.push({ name: 'Mailbox' })">
+      <v-list-tile @click="changeRoute('Mailbox', 2)">
         <v-list-tile-action>
           <v-icon>inbox</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title class="item-title">Mailbox</v-list-tile-title>
+        <v-list-tile-title :class="[{'active': selectedIndex === 2}, 'item-title' ]">Mailbox</v-list-tile-title>
       </v-list-tile>
 
-      <v-list-tile @click="$router.push({ name: 'Calendar' })">
+      <v-list-tile @click="changeRoute('Calendar', 3)">
         <v-list-tile-action>
           <v-icon>calendar_today</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title class="item-title">Calendar</v-list-tile-title>
+        <v-list-tile-title :class="[{'active': selectedIndex === 3}, 'item-title' ]">Calendar</v-list-tile-title>
       </v-list-tile>
 
       <v-list-group
         prepend-icon="pageview">
         <v-list-tile slot="activator">
-          <v-list-tile-title class="item-title">Pages</v-list-tile-title>
+          <v-list-tile-title class="item-title">Widgets</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="$router.push({ name: 'Calendar' })">
+        <v-list-tile @click="changeRoute('Social', 4)">
+          <v-list-tile-action>
+            <v-icon>group</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title :class="[{'active': selectedIndex === 4}, 'item-title' ]">Social</v-list-tile-title>
+        </v-list-tile>
+        <v-list-tile @click="changeRoute('Chart', 5)">
           <v-list-tile-action>
             <v-icon>bar_chart</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title class="item-title">Charts</v-list-tile-title>
+          <v-list-tile-title :class="[{'active': selectedIndex === 5}, 'item-title' ]">Charts</v-list-tile-title>
+        </v-list-tile>
+        <v-list-tile @click="changeRoute('Media', 6)">
+          <v-list-tile-action>
+            <v-icon>perm_media</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title :class="[{'active': selectedIndex === 6}, 'item-title' ]">Media</v-list-tile-title>
         </v-list-tile>
     </v-list-group>
 
@@ -111,10 +123,21 @@ export default {
 
   data() {
     return {
+      selectedIndex: 1,
       admins: [
         ['Management', 'people_outline'],
         ['Settings', 'settings']
       ]
+    }
+  },
+
+  methods: {
+    changeRoute(routeName, selectedIndex) {
+      const vm = this;
+
+      vm.selectedIndex = selectedIndex;
+
+      return vm.$router.push({ name: routeName });
     }
   }
 }
@@ -139,5 +162,9 @@ export default {
   .item-sub-title {
     font-size: 15px;
     font-weight: 500;
+  }
+
+  .active {
+    font-weight: bold;
   }
 </style>
