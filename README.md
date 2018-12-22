@@ -36,6 +36,7 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ### How can I support developers?
 - Star my GitHub repo :star:
@@ -44,5 +45,3 @@ npm run build --report
 <a href="https://www.patreon.com/fatihunlu">
   <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
