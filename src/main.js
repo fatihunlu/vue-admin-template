@@ -19,10 +19,12 @@ Vue.use(VueAxios, axios);
 
 import VueChartkick from 'vue-chartkick';
 import Chart from 'chart.js';
+import fullCalendar from 'vue-fullcalendar';
+import { setupComponents } from './config/setup-components';
 
 Vue.use(VueChartkick, { adapter: Chart });
+Vue.component('full-calendar', fullCalendar);
 
-import { setupComponents } from './config/setup-components';
 setupComponents(Vue);
 
 Vue.use(Vuetify);
