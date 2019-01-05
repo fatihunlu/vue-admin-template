@@ -11,14 +11,23 @@
                   <h1 class="flex my-4 primary--text">Vue Admin Template</h1>
                 </div>
                 <v-form>
-                  <v-text-field append-icon="person" name="login" label="Login" type="text" v-model="model.username"></v-text-field>
+                  <v-text-field
+                    append-icon="person"
+                    name="login"
+                    label="Login"
+                    type="text"
+                    v-model="userEmail"
+                    :error="error"
+                    :rules="[rules.required]"/>
                   <v-text-field
                     :type="hidePassword ? 'password' : 'text'"
                     :append-icon="hidePassword ? 'visibility_off' : 'visibility'"
                     name="password"
                     label="Password"
                     id="password"
-                    v-model="model.password"
+                    :rules="[rules.required]"
+                    v-model="password"
+                    :error="error"
                     @click:append="hidePassword = !hidePassword"/>
                 </v-form>
               </v-card-text>
@@ -30,6 +39,12 @@
           </v-flex>
         </v-layout>
       </v-container>
+      <v-snackbar
+        v-model="showResult"
+        :timeout="2000"
+        top>
+        {{ result }}
+      </v-snackbar>
     </v-content>
   </v-app>
 </template>
@@ -39,11 +54,15 @@ export default {
   data() {
     return {
       loading: false,
-      model: {
-        username: 'admin@yopmail.com',
-        password: '123456'
-      },
-      hidePassword: true
+      userEmail: 'admin@yopmail.com',
+      password: '123456',
+      hidePassword: true,
+      error: false,
+      showResult: false,
+      result: '',
+      rules: {
+        required: value => !!value || 'Required.'
+      }
     }
   },
 
@@ -51,7 +70,22 @@ export default {
     login() {
       const vm = this;
 
-      vm.$router.push({ name: 'Dashboard' });
+      if (!vm.userEmail || !vm.password) {
+
+        vm.result = "Email and Password can't be null.";
+        vm.showResult = true;
+
+        return;
+      }
+
+      if (vm.userEmail === vm.$root.userEmail && vm.password === vm.$root.userPassword) {
+        vm.$router.push({ name: 'Dashboard' });
+      }
+      else {
+        vm.error = true;
+        vm.result = "Email or Password is incorrect.";
+        vm.showResult = true;
+      }
     }
   }
 }

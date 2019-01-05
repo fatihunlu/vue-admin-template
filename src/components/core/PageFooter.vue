@@ -32,11 +32,11 @@ export default {
   data() {
     return {
       icons: [
-        'fa fa-facebook',
-        'fa fa-twitter',
-        'fa fa-google-plus',
-        'fa fa-linkedin',
-        'fa fa-instagram'
+        'fab fa-facebook',
+        'fab fa-twitter',
+        'fab fa-google-plus',
+        'fab fa-linkedin',
+        'fab fa-instagram'
       ]
     }
   }

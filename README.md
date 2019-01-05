@@ -19,6 +19,7 @@ Vue Admin Template is a Vue.js Based Admin Template. This template uses the vuet
 * [Vuetifyjs](https://vuetifyjs.com/)
 * [VueChartKick](https://github.com/ankane/vue-chartkick)
 * [vue-fullcalendar](https://github.com/Wanderxx/vue-fullcalendar)
+* [vue-swatches](https://saintplay.github.io/vue-swatches/#sub-using-a-preset)
 
 ## Build Setup
 

@@ -2,7 +2,7 @@
   <v-navigation-drawer
     v-model="toggle"
     fixed app>
-    <v-toolbar flat dark color="#1D2939" class="toolbar">
+    <v-toolbar flat dark :color="$root.themeColor" class="toolbar">
       <router-link :to="{ name: 'Dashboard' }">
         <img src="static/logo.png" width="36px"></img>
       </router-link>

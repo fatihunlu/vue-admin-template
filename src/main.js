@@ -22,8 +22,12 @@ import Chart from 'chart.js';
 import fullCalendar from 'vue-fullcalendar';
 import { setupComponents } from './config/setup-components';
 
+import swatches from 'vue-swatches';
+import "vue-swatches/dist/vue-swatches.min.css"
+
 Vue.use(VueChartkick, { adapter: Chart });
 Vue.component('full-calendar', fullCalendar);
+Vue.component('swatches', swatches);
 
 setupComponents(Vue);
 
@@ -36,5 +40,10 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  data: {
+    themeColor: '#1D2939',
+    userEmail: 'admin@yopmail.com',
+    userPassword: '123456'
+  }
 })
