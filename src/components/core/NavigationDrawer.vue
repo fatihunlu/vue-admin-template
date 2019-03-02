@@ -58,6 +58,19 @@
     </v-list-group>
 
       <v-list-group
+        prepend-icon="select_all">
+        <v-list-tile slot="activator">
+          <v-list-tile-title class="item-title">Overlays</v-list-tile-title>
+        </v-list-tile>
+        <v-list-tile @click="changeRoute('Snackbar', 7)">
+          <v-list-tile-action>
+            <v-icon>event_note</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title :class="[{'active': selectedIndex === 7}, 'item-title' ]">Snackbar</v-list-tile-title>
+        </v-list-tile>
+    </v-list-group>
+
+      <v-list-group
         prepend-icon="fingerprint">
         <v-list-tile slot="activator">
           <v-list-tile-title class="item-title">Authorization</v-list-tile-title>

@@ -3,6 +3,7 @@
     <v-card
       flat
       tile
+      :color="$root.themeColor"
       class="text-xs-center">
       <v-card-text>
         <v-btn

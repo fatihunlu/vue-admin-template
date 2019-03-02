@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Dashboard from '../pages/Dashboard.vue';
 import Social from '../pages/Social.vue';
 import Media from '../pages/Media.vue';
+import Snackbar from '../pages/Snackbar.vue';
 import Chart from '../pages/Chart.vue';
 import Mailbox from '../pages/Mailbox.vue';
 import Calendar from '../pages/Calendar.vue';
@@ -34,6 +35,17 @@ export default new Router({
         breadcrumb: [
           { name: 'Dashboard', href: 'Dashboard' },
           { name: 'Mailbox' }
+        ]
+      }
+    },
+    {
+      path: '/snackbar',
+      name: 'Snackbar',
+      component: Snackbar,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Snackbar' }
         ]
       }
     },
