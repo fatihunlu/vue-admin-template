@@ -95,6 +95,8 @@
 <script>
 export default {
   data() {
+    var d = new Date();
+    
     return {
       dialog: false,
       dialogCreateEvent: false,
@@ -105,106 +107,64 @@ export default {
       events: [
         {
           title : 'Test',
-          start : '2018-12-02',
-          end : '2018-12-04',
-          cssClass : 'event-item-caution'
+          start : `${d.getFullYear()}-${d.getMonth()+1}-01`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-03`,
+          cssClass : 'event-item-caution',
         },
         {
           title : 'Meeting',
-          start : '2018-12-05',
-          end : '2018-12-07',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-05`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-07`,
           cssClass : 'event-item-trip'
         },
         {
           title : 'Europe Trip',
-          start : '2018-12-03',
-          end : '2018-12-07',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-03`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-07`,
           cssClass : 'event-item-warning'
         },
         {
-          title : 'Test',
-          start : '2018-12-05',
-          end : '2018-12-08',
-          cssClass : 'event-item-trip'
-        },
-        {
           title : 'Event',
-          start : '2018-12-12',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-12`,
           cssClass : 'event-item-meeting'
         },
         {
           title : 'Event',
-          start : '2018-12-16',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-16`,
           cssClass : 'event-item-meeting'
         },
         {
           title : 'Europe Trip',
-          start : '2018-12-20',
-          end : '2018-12-23',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-20`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-23`,
           cssClass : 'event-item-caution'
         },
 
         {
           title : 'Test',
-          start : '2018-12-05',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-05`,
           cssClass : 'event-item-caution'
         },
         {
           title : 'Test',
-          start : '2018-12-27',
-          end : '2018-12-29',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-27`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-28`,
           cssClass : 'event-item-meeting'
         },
         {
           title : 'Test',
-          start : '2019-01-02',
-          end : '2019-01-04',
-          cssClass : 'event-item-caution'
-        },
-        {
-          title : 'Meeting',
-          start : '2019-01-05',
-          end : '2019-01-07',
-          cssClass : 'event-item-trip'
-        },
-        {
-          title : 'Europe Trip',
-          start : '2019-01-03',
-          end : '2019-01-07',
-          cssClass : 'event-item-warning'
-        },
-        {
-          title : 'Test',
-          start : '2019-01-05',
-          end : '2019-01-08',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-17`,
+          end : `${d.getFullYear()}-${d.getMonth()+1}-19`,
           cssClass : 'event-item-trip'
         },
         {
           title : 'Event example',
-          start : '2019-01-12',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-08`,
           cssClass : 'event-item-meeting'
         },
         {
           title : 'Event example',
-          start : '2019-01-16',
-          cssClass : 'event-item-meeting'
-        },
-        {
-          title : 'Europe Trip',
-          start : '2019-01-20',
-          end : '2019-01-23',
-          cssClass : 'event-item-caution'
-        },
-
-        {
-          title : 'Test',
-          start : '2019-01-05',
-          cssClass : 'event-item-caution'
-        },
-        {
-          title : 'Test',
-          start : '2019-01-27',
-          end : '2019-01-29',
+          start : `${d.getFullYear()}-${d.getMonth()+1}-16`,
           cssClass : 'event-item-meeting'
         }
       ]
