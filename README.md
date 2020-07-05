@@ -43,3 +43,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ### How can I support developers?
 - Star my GitHub repo :star:
 - Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+
+## License
+
+[MIT](https://github.com/fatihunlu/vue-admin-template/blob/master/LICENSE) license. 
+
+Copyright (c) 2018-present fatihunlu
