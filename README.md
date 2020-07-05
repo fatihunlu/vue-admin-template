@@ -37,9 +37,6 @@ npm run build --report
 ```
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## License
-*MIT*
-
 ### How can I support developers?
 - Star my GitHub repo :star:
 - Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
