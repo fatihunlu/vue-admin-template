@@ -35,4 +35,7 @@ export default {
 </script>
 
 <style>
+  .v-btn:hover:before{
+    color: transparent !important;
+  }
 </style>
