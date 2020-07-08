@@ -211,12 +211,12 @@ export default {
   }
 
   .prev-month {
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-weight: bold;
   }
 
   .next-month {
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-weight: bold;
   }
 
