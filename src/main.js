@@ -22,6 +22,10 @@ import Chart from 'chart.js';
 import fullCalendar from 'vue-fullcalendar';
 import { setupComponents } from './config/setup-components';
 
+import { setupAndGetI18n } from './config/setup-i18n';
+
+const i18n = setupAndGetI18n(Vue);
+
 import swatches from 'vue-swatches';
 import "vue-swatches/dist/vue-swatches.min.css"
 
@@ -39,11 +43,32 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  i18n,
   components: { App },
   template: '<App/>',
   data: {
     themeColor: '#1D2939',
     userEmail: 'admin@yopmail.com',
     userPassword: '123456'
-  }
+  },
+
+  methods: {
+    setLanguage(language) {
+      const vm = this;
+
+      localStorage.setItem('language', language);
+    
+      document.documentElement.lang = language;
+    
+      vm.$i18n.locale = language;
+    
+      vm.$vuetify.lang.current = language;
+    }
+  },
+
+  created() {
+    const vm = this;
+
+    vm.setLanguage('en');
+  },
 })

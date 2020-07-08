@@ -144,7 +144,7 @@
     <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
       <v-icon medium>fab fa-github</v-icon>
     </v-btn>
-    <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
+    <v-menu  class="toolbar-menu-item" offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
 
       <v-btn icon flat slot="activator" @click="notifications.map(x => x.isActive = false)">
         <v-badge color="green" overlap>
@@ -182,8 +182,27 @@
         </v-card-text>
       </v-card>
     </v-menu>
+    <v-menu  class="toolbar-menu-item" offset-y origin="center center" :nudge-bottom="10" transition="scale-transition" content-class="language-menu">
+      <v-btn icon large flat slot="activator" :ripple="false" >
+        <img :src="selectedLanguageFlag" class="selected-language-flag" />
+      </v-btn>
+      <v-list class="languages-list">
+        <v-list-tile
+          v-for="(language,index) in languages"
+          @click="selectLanguage(language.languageCode)"
+          :key="index"
+          class="languages-list-item">
+            <v-list-tile-action v-if="language.path">
+              <img :src="language.path" class="language-flag" />
+            </v-list-tile-action>
+            <v-list-tile-content class="languages-list-item-title">
+              <v-list-tile-title >{{ language.name }}</v-list-tile-title>
+            </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
 
-    <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
+    <v-menu class="toolbar-menu-item" offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
       <v-btn icon large flat slot="activator" :ripple="false">
         <v-avatar size="42px">
           <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Sunglasses&hairColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Black&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light"/>
@@ -294,10 +313,32 @@ export default {
             vm.$router.push({ name: 'Mailbox' });
           }
         }
+      ],
+      languages: [
+        { name: 'English', languageCode: 'en', path: require('../../assets/flags/en.png') },
+        { name: 'Turkish', languageCode: 'tr', path: require('../../assets/flags/tr.png') },
+        { name: 'French', languageCode: 'fr', path: require('../../assets/flags/fr.png') },
+        { name: 'German', languageCode: 'de', path: require('../../assets/flags/de.png') },
+        { name: 'Japanese', languageCode: 'ja', path: require('../../assets/flags/ja.png') },
+        { name: 'Simplified Chinese', languageCode: 'ch', path: require('../../assets/flags/ch.png') }
       ]
     }
   },
 
+  computed: {
+    selectedLanguageFlag() {
+      const vm = this;
+
+      switch(vm.$i18n.locale) {
+        case 'en': return require('../../assets/flags/en.png');
+        case 'tr': return require('../../assets/flags/tr.png');
+        case 'fr': return require('../../assets/flags/fr.png');
+        case 'de': return require('../../assets/flags/de.png');
+        case 'ja': return require('../../assets/flags/ja.png');
+        case 'ch': return require('../../assets/flags/ch.png');
+      }
+    }
+  },
   methods: {
     toggleNavigationBar() {
       const vm = this;
@@ -332,7 +373,49 @@ export default {
       vm.showResult = true;
 
       vm.dialogSettings = false;
+    },
+
+    selectLanguage(code) {
+      const vm = this;
+
+      vm.$root.setLanguage(code);
     }
   }
 };
 </script>
+<style>
+  .toolbar-menu-item {
+    padding-left: 5px;
+  }
+
+  .selected-language-flag {
+    max-width: 45px;
+  }
+
+  .language-flag {
+    max-width: 40px;
+  }
+
+
+  .languages-list-item {
+    cursor: pointer;
+    margin-top: -2px;
+    margin-left: 1px;
+  }
+
+  .languages-list-item-title {
+    font-size: 16px;
+  }
+
+  .languages-list-item-title:hover {
+    color: #41B883;
+    font-weight: bold;
+  }
+  .language-menu {
+    border-radius: 25px;
+    width: 235px;
+    margin-right: 10px;
+  }
+  
+  
+</style>
