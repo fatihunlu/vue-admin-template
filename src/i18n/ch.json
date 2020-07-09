@@ -1,5 +1,16 @@
 {
     "dashboard": "仪表板",
-    "widgetTodaysVisit": "Bugün ki Ziyaret"
+    "search": "搜索",
+    "calendar": "日历",
+    "mailbox": "邮箱",
+    "widgets": "小部件",
+    "social": "社会的",
+    "charts": "图表",
+    "media": "媒体",
+    "overlays": "叠加层",
+    "snackbar": "小吃店",
+    "authorization": "授权书",
+    "login": "登录",
+    "users": "用户数"
 }
   

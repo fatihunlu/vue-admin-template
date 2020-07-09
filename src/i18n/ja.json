@@ -1,5 +1,16 @@
 {
     "dashboard": "ダッシュボード",
-    "widgetTodaysVisit": "Bugün ki Ziyaret"
+    "search": "探す",
+    "calendar": "カレンダー",
+    "mailbox": "メールボックス",
+    "widgets": "ウィジェット",
+    "social": "ソーシャル",
+    "charts": "チャート",
+    "media": "メディア",
+    "overlays": "オーバーレイ",
+    "snackbar": "スナックバー",
+    "authorization": "認可",
+    "login": "ログインする",
+    "users": "ユーザー"
 }
   

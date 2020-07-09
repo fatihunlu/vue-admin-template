@@ -23,7 +23,7 @@ export default new Router({
       component: Dashboard,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard' }
+          { name: 'dashboard' }
         ]
       }
     },
@@ -33,8 +33,8 @@ export default new Router({
       component: Mailbox,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Mailbox' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'mailbox' }
         ]
       }
     },
@@ -44,8 +44,8 @@ export default new Router({
       component: Snackbar,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Snackbar' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'snackbar' }
         ]
       }
     },
@@ -55,8 +55,8 @@ export default new Router({
       component: Calendar,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Calendar' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'calendar' }
         ]
       }
     },
@@ -66,8 +66,8 @@ export default new Router({
       component: Social,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Social' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'social' }
         ]
       }
     },
@@ -77,8 +77,8 @@ export default new Router({
       component: Media,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Media' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'media' }
         ]
       }
     },
@@ -88,8 +88,8 @@ export default new Router({
       component: Chart,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
-          { name: 'Chart' }
+          { name: 'dashboard', href: 'Dashboard' },
+          { name: 'chart' }
         ]
       }
     },

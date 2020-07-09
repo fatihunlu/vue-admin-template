@@ -10,7 +10,7 @@
       flat
       solo-inverted
       append-icon="search"
-      label="Search">
+      :label="$t('search')">
     </v-text-field>
     <v-spacer></v-spacer>
     <v-rating

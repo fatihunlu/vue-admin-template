@@ -1,5 +1,16 @@
 {
     "dashboard": "Instrumententafel",
-    "widgetTodaysVisit": "Bugün ki Ziyaret"
+    "search": "Suche",
+    "calendar": "Kalender",
+    "mailbox": "Briefkasten",
+    "widgets": "Widgets",
+    "social": "Sozial",
+    "charts": "Diagramme",
+    "media": "Medien",
+    "overlays": "Überlagerungen",
+    "snackbar": "Imbissbude",
+    "authorization": "Genehmigung",
+    "login": "Anmeldung",
+    "users": "Benutzer"
 }
   

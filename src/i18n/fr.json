@@ -1,5 +1,16 @@
 {
     "dashboard": "Tableau de bord",
-    "widgetTodaysVisit": "Bugün ki Ziyaret"
+    "search": "Chercher",
+    "calendar": "Calendrier",
+    "mailbox": "Boites aux lettres",
+    "widgets": "Widgets",
+    "social": "Social",
+    "charts": "Graphiques",
+    "media": "Médias",
+    "overlays": "Superpositions",
+    "snackbar": "Snackbar",
+    "authorization": "Autorisation",
+    "login": "S'identifier",
+    "users": "Utilisateurs"
 }
   
