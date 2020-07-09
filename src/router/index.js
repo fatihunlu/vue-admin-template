@@ -89,7 +89,7 @@ export default new Router({
       meta: {
         breadcrumb: [
           { name: 'dashboard', href: 'Dashboard' },
-          { name: 'chart' }
+          { name: 'charts' }
         ]
       }
     },
