@@ -2,7 +2,9 @@
 Sample Admin Template based on Vuejs &amp; Vuetify.
 
 ## Introduction
-Vue Admin Template is a Vue.js Based Admin Template. This template uses the vuetify components and styles.
+Vue Admin Template is a Vue.js Based Admin Template. This template uses the vuetify components and styles. 
+
+Build and deploy automized with github Actions & github Pages
 
 ## Demo
 [Live Demo](https://fatihunlu.github.io/vue-admin-template)
