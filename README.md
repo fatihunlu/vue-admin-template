@@ -42,6 +42,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ### How can I support developers?
 - Star my GitHub repo :star:
 - Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+- 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=fatihunlu/vue-admin-template&type=Date)](https://star-history.com/#fatihunlu//vue-admin-template&Date)
 
 ## License
 
